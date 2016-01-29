@@ -12,7 +12,7 @@ type Message struct {
 
 
 func main() {
-	recRawMsg := []byte('{"name":"channel add",' + '"data":{"name":"Hardware Support"}}')
+	recRawMsg := []byte(`{"name":"channel add",` + `"data":{"name":"Hardware Support"}}`)
 	var recMessage Message
 	err := json.Unmarshal(recRawMsg, &recMessage)
 	if err != nil {
