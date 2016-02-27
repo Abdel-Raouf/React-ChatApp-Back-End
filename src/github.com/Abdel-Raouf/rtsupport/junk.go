@@ -6,16 +6,6 @@ import (
 	"github.com/mitchellh/mapstructure"
 )
 
-type Message struct {
-	Name string 		`json:"name"` 
-	Data interface{}	`json:"data"`
-}
-
-type Channel struct {
-	Id string	`json:"id"`
-	Name string	`json:"name"`
-}
-
 func main() {
 	recRawMsg := []byte(`{"name":"channel add",` + `"data":{"name":"Hardware Support"}}`)
 	var recMessage Message
